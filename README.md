@@ -1,10 +1,13 @@
-# NFTChallenge Introduction
+# CollectNFT Introduction
 
-NFTChallenge(NC) is a widely interconnected platform where any project party can depoly their contracts and any user can join to play whatever project they want. The project party can easily mint NFTs to eligible users.
+CollectNFT contract is a simple example to be deployed at our [platform](https://github.com/mircial/NFTChallenge). This project becomes one item to our platform and does not need to program ERC721 code. It just focus on how to design wonderful actions. Our platform help create NFT core code for each one item who is deployed at this platform.
 
-On this platform, all projects are integrated with their own NFTs and those NFTs can be shared with each other. The project party can build a new project with the help of other existing projects. The user's NFTs in each item are not isolated. NC encourages users to use the NFTs of other items to complete the tasks required under a current project.
+This example just like a card-collecting game. If a user collected all the NFTs successfully, he will get a medal of honor. Furtherly, the reward can be used in another projects.
 
-NC makes NFTs truly have circulation value. Besides, it will play a vital role in the metaverse.
+**note**: Before we interact with this contract, we need some pre-steps. See code to learn how to complete them firstly.
+
+1. Before the project joined NC, it need to be approved by NFTChallegeCore. Then it can work normally and mint NFTs.
+2. CollectNFT needs to add some Items what it wants user to collect.
 
 ## Installing Prerequisites
 
@@ -21,9 +24,9 @@ npm install -g truffle
 ### Install dependencies
 
 ```bash
-git clone https://github.com/MetaBUILD/NFTChallenge.git
+git clone https://github.com/mircial/CollectNFT.git
 
-cd NFTChallenge
+cd CollectNFT
 
 yarn
 ```
@@ -40,7 +43,7 @@ Now in `truffle-config.js`, you will need to change the `from` address as shown
 
 below in the `aurora` network section:
 
-```json
+```bash
 aurora: {
 
   provider: () => setupWallet('https://testnet.aurora.dev'),
@@ -58,7 +61,7 @@ aurora: {
 
 ## Deploying Contracts
 
-To deploy the `NFTChallenge` contract,  you can run the `yarn` command as follows:
+To deploy the `CollectNFT ` contract,  you can run the `yarn` command as follows:
 
 ```bash
 yarn deploy:aurora
@@ -95,22 +98,11 @@ yarn deploy:aurora
 2_deploy_contracts.js
 =====================
 
-   Deploying 'NFTChallengeFactory'
+   Deploying 'CollectNFT'
    -----------------------------
    ...
 ....
 ```
-
-## Example
-
-CollectNFT contract is a simple example to be deployed at our platform. This project becomes one item to our platform and does not need to program ERC721 code. It just focus on how to design wonderful actions. Our platform help create NFT core code for each one item who is deployed at this platform.
-
-This example describes that if a user collected all the NFTs, he will get a medal of honor. It sounds like the collect card game we played when we were young.
-
-**note**: Before we interact with this contract, we need some pre-steps. See code to learn how to complete them firstly.
-
-1. NFTChallegeCore needs to approve this example to mint NFTs.
-2. CollectNFT needs to add some Items what it wants user to collect.
 
 ## Interface for CollectNFT example
 
@@ -126,6 +118,4 @@ yarn dev
 
 ## Summary
 
-Above all, NC is an awesome platform for both developers and customs. Anyone can depoly their contracts and everyone can play it.  For more details, you can see our slices.
-
-Make Metaverse more wonderful, make NFT more valuable!
+Above all, CollectNFT is a challenging  project for both developers and customers. Anyone can enjoy it and get some unusual awards. Our slides will show more details.
