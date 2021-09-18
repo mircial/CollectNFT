@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 import "./interfaces/IERC721.sol";
-import "./interfaces/INFTChallegeCore.sol";
+import "./interfaces/INFTChallengeCore.sol";
 import "./libraries/Address.sol";
 import "./ICollectNFT.sol";
 
@@ -110,7 +110,7 @@ contract CollectNFT is ICollectNFT {
     }
 
     /// 
-    function ApplyNFT(INFTChallegeCore item, uint256 tokenId) public override returns(bool) {
+    function ApplyNFT(INFTChallengeCore item, uint256 tokenId) public override returns(bool) {
         require(item.balanceOf(msg.sender) == 0, 'You have applied one NFT once.');
         require(Verify(msg.sender), "Please achieve the apply qualifications firstly.");
         item.mint(msg.sender, tokenId);

@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "./interfaces/INFTChallegeCore.sol";
+import "./interfaces/INFTChallengeCore.sol";
 
 interface ICollectNFT{
     //// events
@@ -23,5 +23,5 @@ interface ICollectNFT{
     function StorageUesdNFT(address) external returns(bool);
     function selectNFT(address item, uint256 tokenId) external;
     function IsNotUsed(address item, uint256 tokenId) external returns(bool);
-    function ApplyNFT(INFTChallegeCore item, uint256 tokenId) external returns(bool);
+    function ApplyNFT(INFTChallengeCore item, uint256 tokenId) external returns(bool);
 }

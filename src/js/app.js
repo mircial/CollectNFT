@@ -88,7 +88,7 @@ App = {
       event.preventDefault();
 
       var TokenId = 0;
-      var CoreAddress = '0x2830061ac7bc8D8ef950973bcDDf53046f40D042'
+      var CoreAddress = '0xF94378A02Fb259890AF12095bf38E80E429286d5'
       var CollectNFTInstance;
 
       web3.eth.getAccounts(function(error, accounts) {
